@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+    <style>
+        body{
+            margin:30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading1">Welcome to my Site </h1>
+    <a href="www.google.com" id="anchor1">Google</a> <br>
+    <img style="height: 100px; width: 200px;" id="image1" src="https://images.unsplash.com/photo-1546587348-d12660c30c50?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"> <br>
+
+    <button id="button1"> Button 1</button>
+    <button id="button2">Button 2</button>
+    <button id="button3">Button 3</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+       $("#button1").on("click", function(){
+        alert("Text: " + $("#heading1").text());
+       })
+       $("#image1").on("click", function(){
+        alert("src: " + $(this).attr("src"));
+       })
+       $("#button2").on("click", function(){
+        alert("href: " + $("#anchor1").attr("href"));
+       })
+       $("#button3").on("click", function(){
+        alert($("#heading1").html()); 
+       });
+    </script>
+</body>
+</html>

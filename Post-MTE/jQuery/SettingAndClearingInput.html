@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        body{
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button id="set">Set Value</button>
+    <button id="clear">Clear Value</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+       $("#set").click(function(){
+        $("#input1").val('Kiranpal Singh');
+       })
+       $("#clear").click(function(){
+        $("#input1").val('');
+       })
+    </script>
+</body>
+</html>

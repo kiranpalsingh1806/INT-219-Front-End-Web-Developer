@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <h1>My CSV File Generator</h1>
+    <label for="question">Question:</label>
+    <input type="text"  name="" id="question"><br><br>
+    <label for="choice1">Choice1:</label>
+    <input type="text" name="" id="choice1"><br><br>
+    <label for="choice2">Choice2:</label>
+    <input type="text" name="" id="choice2"><br><br>
+    <label for="choice3">Choice3:</label>
+    <input type="text" name="" id="choice3"><br><br>
+    <label for="choice4">Choice4:</label>
+    <input type="text" name="" id="choice4"><br><br>
+    <label for="answer">Answer:</label>
+    <input type="text" name="" id="answer"><br><br>
+
+    <button onclick="getcsvFile()"> Get CSV</button><br>
+    <p id="returnCSV" style="font-size: 20px;"> </p>
+</body>
+
+<script>
+    function getcsvFile(){    
+
+        var ques = document.getElementById("question").value;
+        var ch1 = document.getElementById("choice1").value;
+        var ch2 = document.getElementById("choice2").value;
+        var ch3 = document.getElementById("choice3").value;
+        var ch4 = document.getElementById("choice4").value;
+        var ans = document.getElementById("answer").value;
+        // console.log(ques);
+
+        document.getElementById("returnCSV").innerHTML = '{' + '<br>';
+        document.getElementById("returnCSV").innerHTML += 'question: "' + ques + '",<br>';
+        document.getElementById("returnCSV").innerHTML += 'choice1: "' + ch1 + '",<br>'; 
+        document.getElementById("returnCSV").innerHTML += 'choice2: "' + ch2 + '",<br>'; 
+        document.getElementById("returnCSV").innerHTML += 'choice3: "' + ch3 + '",<br>'; 
+        document.getElementById("returnCSV").innerHTML += 'choice4: "' + ch4 + '",<br>'; 
+        document.getElementById("returnCSV").innerHTML += 'answer: "' + ans + '",<br>'; 
+        document.getElementById("returnCSV").innerHTML += '},';
+        document.getElementById("returnCSV").style.color = "#3D2C8D";
+    }
+</script>
+</html>

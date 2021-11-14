@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            margin: 0;
+        }
+        main{
+            width: 600px;
+            margin: 50px auto;
+            color: white;
+            display: grid;
+            grid-template-rows: 400px 66.6px;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .div1{ 
+            background: url(https://images.pexels.com/photos/6439051/pexels-photo-6439051.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;  
+            grid-column: 1/-1;
+            border: 2px solid rgb(46, 42, 42);
+        }
+        .div2{ 
+            background: url(https://images.pexels.com/photos/6439051/pexels-photo-6439051.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        .div3{ 
+            background: url(https://holxo-web-s3.s3.amazonaws.com/media/blogs/coverimages/post_cvimg_1582271004_711555__Red_Fort.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        .div4{
+            background: url(https://images.pexels.com/photos/34107/milky-way-stars-night-sky.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;    
+        }
+        .div5{
+            background: url(https://images.pexels.com/photos/273935/pexels-photo-273935.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        .div6{
+            background: url(https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        .div7{ 
+            background: url(https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+
+        .div2,  .div3, .div4, .div5, .div6, .div7 {
+            border: 1.5px solid rgb(46, 42, 42);
+        }
+
+        @media screen and (max-width: 720px) {
+            .div1, .div2,  .div3, .div4, .div5, .div6, .div7 {
+                border: 1.5px solid rgb(51, 125, 221);
+            }
+            main{
+                width: 400px;
+                margin: 25px auto;
+                color: white;
+                display: grid;
+                grid-template-rows: 250px 75px 75px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body onmouseover="myFunction(event)">
+    <main>
+        <div id="bigImage" class="div1"> </div>
+        <div id="image1" class="div2"> </div>
+        <div id="image2" class="div3"> </div>
+        <div id="image3" class="div4"> </div>
+        <div id="image4" class="div5"> </div>
+        <div id="image5" class="div6"> </div>
+        <div id="image6" class="div7"> </div>
+    </main>
+
+    <p id="status">Status</p>
+    <p id="statusTwo" style="color: brown; font-weight: 600; text-align: center; font-size: larger;"></p>
+
+    <script>
+        function myFunction(){
+            
+            var x = event.target;
+            var ID = event.target.id;
+            document.getElementById("status").innerHTML = "Triggered by " + ID;
+
+            document.getElementById("statusTwo").innerHTML = ID;
+
+            var imageID = document.getElementById("statusTwo").innerHTML;
+
+            if(imageID == "bigImage"){
+                // Donot change the image as our first image is already shown
+            } else if (imageID == "image1") {
+                document.getElementById("bigImage").style.background = "url(https://images.pexels.com/photos/6439051/pexels-photo-6439051.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)";
+                document.getElementById("bigImage").style.backgroundRepeat = "no-repeat";
+                document.getElementById("bigImage").style.backgroundSize = "cover";
+            }  else if (imageID == "image2") {
+                document.getElementById("bigImage").style.background = "url('https://holxo-web-s3.s3.amazonaws.com/media/blogs/coverimages/post_cvimg_1582271004_711555__Red_Fort.jpg')";
+                document.getElementById("bigImage").style.backgroundRepeat = "no-repeat";
+                document.getElementById("bigImage").style.backgroundSize = "cover";
+            }  else if (imageID == "image3") {
+                document.getElementById("bigImage").style.background = "url(https://images.pexels.com/photos/34107/milky-way-stars-night-sky.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500)";
+                document.getElementById("bigImage").style.backgroundRepeat = "no-repeat";
+                document.getElementById("bigImage").style.backgroundSize = "cover";
+            }  else if (imageID == "image4") {
+                document.getElementById("bigImage").style.background = "url(https://images.pexels.com/photos/273935/pexels-photo-273935.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)";
+                document.getElementById("bigImage").style.backgroundRepeat = "no-repeat";
+                document.getElementById("bigImage").style.backgroundSize = "cover";
+            }  else if (imageID == "image5") {
+                document.getElementById("bigImage").style.background = "url(https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)";
+                document.getElementById("bigImage").style.backgroundRepeat = "no-repeat";
+                document.getElementById("bigImage").style.backgroundSize = "cover";
+            }  else if (imageID == "image6") {
+                document.getElementById("bigImage").style.background = "url(https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)";
+                document.getElementById("bigImage").style.backgroundRepeat = "no-repeat";
+                document.getElementById("bigImage").style.backgroundSize = "cover";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div, button{
+            padding: 50px;
+            border: 3px solid rgb(66, 63, 63);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parentDiv" onclick="myFunction3()">
+        <div id="myDiv" onclick="myFunction2()">
+            <button onclick="myFunction()"  id="myButton">
+                Button
+            </button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+
+        document.getElementById("myButton").style.backgroundColor = "lightgreen";
+    }
+    
+    function myFunction2() {
+        var firstDelay = 500;
+        setTimeout(function() {
+            document.getElementById("myDiv").style.backgroundColor = "cadetblue";
+            }, firstDelay);
+    }
+
+    function myFunction3() {
+        var secondDelay = 1000;
+        setTimeout(function(){
+            document.getElementById("parentDiv").style.backgroundColor = "orange";
+        }, secondDelay);
+
+    }
+
+    
+</script>
+
+</html>

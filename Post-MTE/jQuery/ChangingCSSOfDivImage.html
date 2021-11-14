@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+    <style>
+        body{
+            margin:30px;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        Click to change the size
+    </div>
+    <img id="image1" style="height: 100px; width: 200px;" id="image1" src="https://images.unsplash.com/photo-1546587348-d12660c30c50?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"> <br>
+    <button id="button1"> Click to change size</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#button1").on("click",function(){
+            $("#div1, #image1").css({
+               "width": "200px",
+               "height": "200px"
+            });
+        })
+    </script>
+</body>
+</html>
