@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
     <style>
-        p{margin-top: 10px;margin-bottom: 10px;}
         html {
             font-size: 20px;
             font-weight: 400;
@@ -17,74 +16,90 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .topnav {
-        overflow: hidden;
-        background-color: #333;
+        #main-body{
+            position: relative;
+            height: 500px;
         }
 
-        .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
+        #left-body{
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            width: 500px;
         }
 
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+        #right-body {
+            position: absolute;
+            top: 80px;
+            right: 110px;
         }
 
-        .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
+        #image1{
+            height: 400px;
+            width: 400px;
         }
 
-        .item2 { 
-            grid-area: menu;
-            height: 90vh;
-            width: 60vw;
+        #title-bar{
+            position: relative;
+            height: 70px;
+            padding-top: 15px;
         }
-        .item3 {
-             grid-area: main;
-             width: 40vw;
+        
+        #site-name{
+            position: absolute;
+            left: 50px;
+        }
+        #navigation-items {
+            position: absolute;
+            right: 300px;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-areas:'menu main';
-            background-color: #2196F3;
+        .navigation-item-single {
+            padding: 10px;
         }
 
-        .grid-container > div {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 20px 0;
+        .site-heading{
+            font-weight: bolder;
             font-size: 30px;
+
         }
+
+        .myBtn {
+            color: white;
+            font-weight: 500;
+        }
+
+        
     </style>
 </head>
 <body>
-    <div class="topnav">
-        <a class="active" href="#dreamupper">DreamUpper</a>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#news">News</a>
+    <div id="title-bar">
+        <div id="site-name">
+            <span class="site-heading" style="color: #15d0b9;">Dream</span>
+            <span class="site-heading" style="color: #27c645;">Upper</span>
+        </div>
+        <span id="navigation-items">
+            <span class="navigation-item-single">Home</span>
+            <span class="navigation-item-single">About</span>
+            <span class="navigation-item-single">Services</span>
+            <span class="navigation-item-single">Team</span>
+            <span class="navigation-item-single">News</span>
+        </span>
     </div>
-    <div class="grid-container">
-        <div class="item2">
-            <h1>Start up your dream</h1>
+    <div id="main-body">
+        <div id="left-body">
+            <h1>Start up your</h1>
+            <h1>dream</h1>
             <p>Create your own business with our company. We will
                 help you to make your dream true in several ways.
             </p>
-            <button  class= "btn btn-primary">Start Now</button>
-            <button class="btn btn-success">Learn More</button>
+            <button  class= "btn myBtn" style="background-color: #15d0b9;">Start Now</button>
+            <button class="btn myBtn" style="background-color: #27c645;">Learn More</button>
         </div>
-        <img class="item3" src="bodypic.PNG" alt="">
-      </div>
+        <div id="right-body">
+            <img id="image1" src="bodypic.PNG" alt="">
+        </div>
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
