@@ -30,13 +30,13 @@
 
         #right-body {
             position: absolute;
-            top: 80px;
+            top: 60px;
             right: 110px;
         }
 
         #image1{
-            height: 400px;
-            width: 400px;
+            height: 450px;
+            width: 500px;
         }
 
         #title-bar{
@@ -56,6 +56,16 @@
 
         .navigation-item-single {
             padding: 10px;
+            color: #7f859d;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .navigation-item-single:hover {
+            padding: 9px;
+            color: #5f76d3;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
         }
 
         .site-heading{
@@ -67,6 +77,30 @@
         .myBtn {
             color: white;
             font-weight: 500;
+        }
+
+        #lines-div {
+            position: relative;
+            height: 30px;
+        }
+
+        #line1 {
+            width: 40px;
+            height: 2px;
+            left: 5px;
+            position: absolute;
+        }
+        #line2 {
+            width: 20px;
+            left: 50px;
+            height: 2px;
+            position: absolute;
+        }
+        #line3 {
+            width: 5px;
+            left: 75px;
+            height: 2px;
+            position: absolute;
         }
 
         
@@ -88,6 +122,11 @@
     </div>
     <div id="main-body">
         <div id="left-body">
+            <div id="lines-div">
+                <hr id="line1" style="color: #15d0b9;">
+                <hr id="line2" style="color: #27c645;">
+                <hr id="line3" style="color: #15d0b9;">
+            </div>
             <h1>Start up your</h1>
             <h1>dream</h1>
             <p>Create your own business with our company. We will
