@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+    </head>
+
+    <!-- Homework : Do this program with help of Event Listener -->
+    <!-- Status : Incomplete -->
+
+    <body>
+        <input id = "input1" type="text" onblur="change()" onkeyup="change()">
+    </body>
+
+    <script>
+
+        function change(){
+            if(document.getElementById("input1").value == ''){
+                document.getElementById("input1").style.backgroundColor = "crimson";
+                document.getElementById("input1").style.border = "solid 5px darkred";
+            }
+            else{
+                document.getElementById("input1").style.backgroundColor = "lawngreen"
+            }
+        }
+
+    </script>
+</html>

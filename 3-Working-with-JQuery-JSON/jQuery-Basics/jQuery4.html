@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+    <style>
+        body{
+            margin:30px;
+        }
+        #parentDiv{
+            height: 250px;
+        }
+        div{
+            margin: 30px;
+            padding: 30px;
+            border: 3px solid rgb(66, 63, 63);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parentDiv" style="background-color: dodgerblue;">
+        <div id="childDiv" style="background-color: firebrick;">
+            <div id="grandChildDiv" style="background-color: goldenrod;">
+
+            </div>
+        </div>
+    </div>
+    <button id="button1">Remove</button>
+    <button id="button2">Empty</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#button1").on("click",function(){
+            $("#parentDiv").remove();
+        })
+        $("#button2").on("click",function(){
+            $("#parentDiv").empty();
+        })
+    </script>
+</body>
+</html>

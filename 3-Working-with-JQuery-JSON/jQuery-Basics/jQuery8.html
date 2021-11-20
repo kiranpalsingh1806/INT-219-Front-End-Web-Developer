@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="hideHeading">Slide Up </button>
+    <button id="showHeading">Slide Down </button>
+    <button id="slideToggle">Slide Toggle</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#hideHeading").on("click",function(){
+            $("h1").slideUp();
+        });
+        $("#showHeading").on("click",function(){
+            $("h1").slideDown();
+        });
+        $("#slideToggle").on("click",function(){
+            $("h1").slideToggle();
+        });
+    </script>
+</body>
+</html>

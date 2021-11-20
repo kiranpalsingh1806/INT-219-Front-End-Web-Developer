@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+    </head>
+
+    <body>
+        <input type="text" onkeyup="change(this)" onblur="change(this)">
+        <input type="text" onkeyup="change(this)" onblur="change(this)">
+    </body>
+
+    <script>
+        function change(x){
+            if(x.value == ''){
+                x.style.background = "crimson";
+            }
+            else{
+                x.style.background = "lawngreen";
+            }
+        }
+    </script>
+</html>

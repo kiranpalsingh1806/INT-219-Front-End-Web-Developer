@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px 200px;
+        }
+        p{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        html {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 1.125;
+            color: #202011;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #div1 {
+            background-color: #4dca6c;
+            font-size: 30px;
+            font-weight: 400;
+            text-align: center
+        }
+    </style>
+</head>
+<body ng-app="mymodule" ng-controller="mycontroller">
+    <div id="div1">
+        First Name : 
+        <input type="text" ng-model='firstName'><br>
+        Last Name  : 
+        <input type="text" ng-model='lastName'><br>
+        Message    : 
+        <input type="text" ng-model='message'><br>
+        Notes  : 
+        <input type="text" ng-model='notes'><br>
+    </div>
+
+    <div>
+        {{'First Name :' + firstName}} <br>
+        {{'Last Name  :' + lastName}} <br>
+        {{'Message    : ' + message}} <br>
+        {{'Notes      : ' + notes}}
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        var myapp = angular.module("mymodule", []);
+        myapp.controller("mycontroller", function($scope) {
+            $scope.firstName = "Kiranpal";
+            $scope.lastName = "Singh";
+            $scope.message = "Welcome to site";
+            $scope.notes =  "Your notes here.";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 50px;
+            padding: 50px;
+            border: 3px solid rgb(66, 63, 63);
+            border-radius: 5px;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            border: 3px solid rgb(66, 63, 63);
+        }
+    </style>
+</head>
+<body>
+    <div id="parentDiv">
+        <div id="myDiv">
+            <button onmouseover="myFunction()"  id="myButton">
+                Button
+            </button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+
+        document.getElementById("myButton").style.backgroundColor = "lightgreen";
+        document.getElementById("myButton").style.transform = "rotate(1080deg)";
+        document.getElementById("myButton").style.transitionDuration = "5s";
+        
+        var firstDelay = 500;
+
+        setTimeout(function() {
+            document.getElementById("myDiv").style.backgroundColor = "cadetblue";
+            }, firstDelay);
+
+            // document.getElementById("myDiv").style.transform = "scale(1.1)";
+            document.getElementById("myDiv").style.transform = "rotate(360deg)";
+            document.getElementById("myDiv").style.transitionDuration = "10s";
+
+        var secondDelay = 1000;
+
+        setTimeout(function(){
+            document.getElementById("parentDiv").style.backgroundColor = "orange";
+        }, secondDelay);
+
+            // document.getElementById("parentDiv").style.transform = "scale(0.9)";
+            document.getElementById("parentDiv").style.transform = "rotate(360deg)";
+            document.getElementById("parentDiv").style.transitionDuration = "7s";
+        }
+
+    
+</script>
+
+</html>

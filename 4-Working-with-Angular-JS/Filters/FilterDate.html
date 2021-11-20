@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body ng-app="myApp" ng-controller="myController">
+
+        {{ dat | date }}<br>
+        {{ dat | date : "fullDate" }}<br>
+        {{ dat | date : "longDate" }}<br>
+        {{ dat | date : "shortDate" }}<br>
+        {{ dat | date : "dd.MMMM.yyyy" }}<br>
+        {{ dat | date : "dd.MM.yyyy" }}<br>
+        {{ dat | date : "dd.MM.yy" }}<br>
+        {{ dat | date : "yyyy" }}
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+        $scope.dat = new Date();
+        });
+    </script>
+</body>
+</html>

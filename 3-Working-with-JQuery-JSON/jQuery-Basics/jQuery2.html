@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+    <style>
+        body{
+            margin:30px;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            text-align: center;
+        } 
+        ul{
+            font-size: larger;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list1">
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+    <button id="button1"> Append</button>
+    <button id="button2"> Prepend</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#button1").on("click",function(){
+            $("#list1").append("<li> New item</li>")
+        });
+        $("#button2").on("click",function(){
+            $("#list1").prepend("<li> Fresh item</li>")
+        });
+    </script>
+</body>
+</html>

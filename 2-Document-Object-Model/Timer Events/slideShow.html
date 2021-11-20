@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+    </head>
+
+    <body>
+        <img src="image2.png" alt="" id="slide" width="800px" height="480px">
+
+    </body>
+
+    <script>
+        var images = Array();
+        var i = 0;
+        images[0] = "image1.jpg";
+        images[1] = "image2.png";
+        images[2] = "image3.jpg";
+        images[3] = "image4.jpg";
+
+        function slider(){
+            document.getElementById("slide").src = images[i];
+
+            if(i < images.length-1){
+                i++;
+            }else{
+                i = 0;
+            }
+        }
+        setInterval(slider, 1500);
+        slider();
+
+
+    </script>
+</html>

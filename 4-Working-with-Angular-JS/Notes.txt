@@ -1,0 +1,28 @@
+AngularJS is based on MVC - Model View Controller.
+Model - controls the data
+View - User Interface
+Controller - maintaining the interaction between Model and View
+
+AngularJS - developed by Google
+
+Directives:
+ng-app : used for initializing Angular App. Use it in body tag so that we can
+use Angular Code inside body anywhere.
+These are extended HTML attributes used in AngularJS.
+Interpolation is a technique that allows the user to bind a value to a UI element.
+
+Scope:
+The scope forms the model. All the variables defined in scope can be accessed by
+view and controllers.
+
+Controller:
+AngularJS applications are controlled by controllers.The ng-controller directive
+defines the application controller.A controller is a JavaScript Object, created 
+by a standard JavaScript object constructor.
+
+Filters:
+Number Filter
+Uppercase Lowercase Filter
+Filter filter
+Currency Filter
+Order By Filter
