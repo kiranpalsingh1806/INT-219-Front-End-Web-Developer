@@ -28,21 +28,24 @@
             font-size: 50px;
             font-weight: 600;
         }
+        table, td, th {
+            border: 2px solid dodgerblue;
+        }
     </style>
 </head>
 <body ng-app="mymodule" ng-controller="mycontroller">
     <div>
-        <select>
-            <option ng-select="students | orderBy : '-marks'" >Ascending By Marks</option>
-            <option ng-select="students | orderBy : '+marks'">Descending By Marks</option>
-            <option ng-select="students | orderBy : '+name'">Ascending By Name</option>
-            <option ng-select="students | orderBy : '-name'">Descending By Name</option>
-          </select>
-        <ul>
-            <li ng-repeat="x in students">
-                {{x.name + " - " + x.marks}}
-            </li>
-        </ul>
+        <h1 style="text-align: center;">Students Record</h1>
+        <table  width="100%">
+            <tr>
+                <th ng-click="orderByMe('name')">Name</th>
+                <th ng-click="orderByMe('marks')">Marks</th>
+            </tr>
+                <tr ng-repeat="x in students | orderBy:myOrderBy">
+                <td>{{x.name}}</td>
+                <td>{{x.marks}}</td>
+            </tr>
+        </table>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -51,14 +54,19 @@
         var myapp = angular.module("mymodule", []);
         myapp.controller("mycontroller", function($scope) {
             $scope.students = [
-                {name: "Ram" , marks: 33},
-                {name: "Sham" , marks: 34},
-                {name: "Yatin" , marks: 64},
-                {name: "Sahil" , marks: 33},
-                {name: "John" , marks: 34},
-                {name: "Rohan" , marks: 64},
+                {name: "Aman" , marks: 34},
+                {name: "Brad" , marks: 44},
+                {name: "Chiku" , marks: 89},
+                {name: "Dell" , marks: 99},
+                {name: "Jatin" , marks: 88},
+                {name: "Sam" , marks: 74},
+                {name: "Emily" , marks: 45},
+                {name: "Green" , marks: 14},
             ];
-        })
+            $scope.orderByMe = function(x) {
+                $scope.myOrderBy = x;
+            }
+        });
     </script>
 </body>
 </html>
