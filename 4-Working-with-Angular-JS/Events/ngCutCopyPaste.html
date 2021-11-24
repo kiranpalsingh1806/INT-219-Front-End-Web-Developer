@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
     <style>
         body{
-            margin: 30px;
+            margin: 50px 200px;
         }
         p{
             margin-top: 10px;
@@ -17,19 +18,31 @@
         }
         html {
             font-size: 20px;
+            text-align: center;
             font-weight: 400;
             line-height: 1.125;
             color: #202011;
             font-family: Arial, Helvetica, sans-serif;
         }
+        #div1 {
+            background-color: #4dca6c;
+            font-size: 30px;
+            font-weight: 400;
+            text-align: center
+        }
     </style>
 </head>
-<body>
-    <button>Button</button>
-    <p>Sample Paragraph</p>
+<body ng-app="">
+
+    <input type="text" ng-cut="count = count + 1" ng-init="count=0" value="hello">
+    <input type="text" ng-copy="count1 = count1 + 1" ng-init="count1=0">
+
+    <p>The text has been cut {{count}} times. </p>
+    <p>The text has been copied {{count1}} times.</p>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    <script>
+    </script>
 </body>
 </html>

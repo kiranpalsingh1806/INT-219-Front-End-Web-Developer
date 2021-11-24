@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
     <style>
         body{
-            margin: 30px;
+            margin: 50px 200px;
         }
         p{
             margin-top: 10px;
@@ -24,12 +25,22 @@
         }
     </style>
 </head>
-<body>
-    <button>Button</button>
-    <p>Sample Paragraph</p>
+<body ng-app="mymodule" ng-controller="mycontroller">
+
+    <input type="text" ng-cut="count = count + 1">
+    <input type="text" ng-copy="count1 = count1 + 1">
+
+    <p>The text has been cut {{count}} times. </p>
+    <p>The text has been copied {{count1}} times.</p>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    <script>
+        var myapp = angular.module("mymodule", []);
+        myapp.controller("mycontroller", function($scope) {
+            $scope.count = 0;
+            $scope.count1 = 0;
+        })
+    </script>
 </body>
 </html>

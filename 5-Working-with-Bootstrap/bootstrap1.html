@@ -22,11 +22,41 @@
             color: #202011;
             font-family: Arial, Helvetica, sans-serif;
         }
+        #div1{
+            background-color: dodgerblue;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        #div2{
+            background-color: darksalmon;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        #div3{
+            background-color: seagreen;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        #div4{
+            background-color: mediumslateblue;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <button>Button</button>
-    <p>Sample Paragraph</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" id="div1"> Div 1</div>
+            <div class="col-lg-3" id="div2"> Div 2</div>
+            <div class="col-lg-3" id="div3"> Div 3</div>
+            <div class="col-lg-3" id="div4"> Div 4</div>
+        </div> 
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
