@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Document
+    </title>
+</head>
+
+<body>
+    <script>
+        function big() {
+            document.getElementById("btn1").style.height = "40px";
+            document.getElementById("btn1").style.width = "120px";
+            document.getElementById("btn1").style.backgroundColor = "lawngreen";
+            document.getElementById("btn1").style.color = "white";
+        }
+
+        function small() {
+            document.getElementById("btn1").style.height = "30px";
+            document.getElementById("btn1").style.width = "90px";
+            document.getElementById("btn1").style.backgroundColor = "grey";
+            document.getElementById("btn1").style.color = "white";
+        }
+    </script>
+
+    <button id="btn1" onmouseover="big()" onmouseout="small()">Click Here</button>
+</body>
+
+</html>
