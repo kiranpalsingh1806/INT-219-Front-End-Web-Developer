@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title></title>
+
+    <style>
+        body {
+            overflow: hidden;
+            background-image: url("lpu.jpg");
+            background-size: cover;
+        }
+
+        div {
+            position: absolute;
+            margin: auto;
+            width: 600px;
+            height: 100%;
+            /* border: 2px solid; */
+            left: 450px;
+        }
+
+        input[type=text],
+        select,
+        input[type=password],
+        input[type=email] {
+            width: 300px;
+            padding: 12px;
+            margin: 10px;
+            border: 8px solid purple;
+            border-radius: 40px;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            margin: 17px;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 8px solid purple;
+            width: 120px;
+        }
+
+        input[type=submit]:hover,
+        input[type=reset]:hover {
+
+            background-color: rgba(243, 157, 243, 0.65);
+            color: black;
+            /* font-size: x-large; */
+            transform: scale(1.2);
+            transition: 1s;
+        }
+
+        input[type=text]:hover,
+        input[type=password]:hover,
+        input[type=email]:hover {
+            background-color: rgba(243, 157, 243, 0.65);
+        }
+
+
+        ::placeholder {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+
+        <form name="myform" onsubmit="validation()">
+            <table>
+                <h2 style="text-align:center">Don't have an account?! Want to join us?!</h2>
+
+
+                <tr>
+                    <td>Name</td>
+                    <td><input name="name" type="text" placeholder="FirstName LastName"></td>
+
+                </tr>
+
+                <tr>
+                    <td>Email ID</td>
+                    <td><input name="email" type="email" placeholder="Email ID"> </td>
+                </tr>
+
+                <tr>
+                    <td>Select city</td>
+                    <td><select name="cities">
+                            <option value="Select">Select</option>
+                            <option value="Noida">Noida</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Cape Town">Cape Town</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td> <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="other"> Other
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pass" placeholder="Password"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="chec" value="I agree to the terms and conditions">I agree to the
+                        terms and conditions</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td> <input type="submit"> <input type="reset"></td>
+
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function validation() {
+            if (document.myform.name.value == "") {
+                alert("Name is mandatory");
+                document.myform.name.focus();
+                return false;
+            }
+            if (document.myform.email.value == "") {
+                alert("Email is mandatory");
+                document.myform.email.focus();
+                return false;
+            }
+            if (document.myform.cities.value == "Select") {
+                alert("Please select the city");
+                document.myform.cities.focus();
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

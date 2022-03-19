@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
-        body{
+
+        body {
             font-size: large;
         }
     </style>
     <title> Title </title>
 </head>
-<body style="margin: 50px; background-color: whitesmoke;">
-    
-    <img onmouseout="myFunction(event)" onmouseover="myFunction(event)" src="https://i.ytimg.com/vi/-3N6fCzgXuc/maxresdefault.jpg" alt="" style="width: 300px; height: 200px;"><br><br>
-    <div onmouseout="myFunction(event)" onmouseover="myFunction(event)" style="width: 300px; height: 200px; border: 1px solid rgb(23, 21, 24); text-align: center; line-height: 200px;"> I'm DIV</div>
-    <p id="demo" style="font-size: 35px; color: brown;" ></p>
+
+<body onmouseover="myFunction(event)" style="margin: 100px; background-color: whitesmoke;">
+
+    <button> Button</button><br><br><br>
+    <p style="border: 1px solid gray;">This is paragraph</p><br>
+    <input type="text"><br><br>
+    <a href="https://www.google.com" target="_blank"> Search Here</a><br><br>
+    <div style="border: 1px solid gray;">This is div tag</div><br>
+    <textarea style="border: 1px solid gray;"></textarea>
+    <p id="demo" style="font-size: 50px; color: brown;"></p>
 
     <script>
-        function myFunction(){
+        function myFunction() {
             var x = event.target;
-            document.getElementById("demo").innerHTML = " -> Triggered by " + x.tagName + " element and its type is " + event.type;
+            document.getElementById("demo").innerHTML = " -> Triggered by " + x.tagName + " element";
         }
     </script>
 </body>
+
 </html>

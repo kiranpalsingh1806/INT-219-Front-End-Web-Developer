@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 620px;
+            height: 310px;
+        }
+
+        .bigImage {
+            height: 310px;
+            width: 620px;
+        }
+
+        .imgStyle {
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body onclick="changeImageOnClick()" onClick="f1()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" alt="" id="bigImage"><br>
+    <img id="1" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" class="imgStyle">
+    <img id="2" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" class="imgStyle">
+    <img id="3"
+        src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+        class="imgStyle">
+    <img id="4" src="https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" class="imgStyle">
+    <img id="5" src="https://www.w3schools.com/css/img_5terre.jpg" class="imgStyle">
+    <img id="6"
+        src="https://pe-images.s3.amazonaws.com/basics/cc/image-size-resolution/resize-images-for-print/image-cropped-8x10.jpg"
+        class="imgStyle">
+</body>
+
+<script type="text/javascript">
+
+    function changeImageOnClick() {
+        var x = event.target;
+        if (x.tagName == "IMG") {
+            a = x.getAttribute("src");
+            document.getElementById("bigImage").setAttribute("src", a);
+        }
+    }
+
+    function f1() {
+        x = event.target;
+        x.style.cursor = 'pointer';
+        x.style.borderColor = 'red';
+    }
+
+    function f2() {
+
+    }
+
+
+</script>
+
+</html>
